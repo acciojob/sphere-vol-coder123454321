@@ -9,7 +9,11 @@ function volume_sphere(){
     alert("Radius cannot be negative");
     return;
 }
-	let valume_spare=(4/3)*Math.PI*r*r*r;
+	if (isNaN(r)) {
+    valume.value = "NaN";
+    return;
+}
+	let valume_spare=((4/3)*Math.PI*r*r*r).toFixed(4);
 	valume.value=valume_spare;
   
 } 
